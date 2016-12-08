@@ -1,0 +1,124 @@
+<h3>Add Order</h3>
+
+<form class="form-horizontal" role="form">
+
+  <div class="form-group" ng-show=!isShowCustLabel>
+    <label for="sku" class="col-sm-2 control-label">Customer Name:</label>
+    <div class="col-sm-4">
+      <select class="selectpicker col-sm-4" ng-options="c.name for c in customers" 
+      ng-model="selectedCustomer"></select>
+    </div>
+  </div>
+
+  <div class="form-group" ng-if="isShowCustLabel">
+    <label for="sku" class="col-sm-2 control-label">Customer Name:</label>
+    <div class="col-sm-4" style="margin-top:6px;">{{custNameLabel}}</div>
+  </div>
+ 
+ <div class="form-group">
+    <label for="sku" class="col-sm-2 control-label">Order Date:</label>
+    <div class="col-sm-4">
+        <div class="input-append date" id="dp3" data-date-format="dd-mm-yyyy">
+          <input class="span2" size="16" type="text" ng-model="order.orderDate">
+          <span class="add-on"><i class="icon-th"></i></span>
+        </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="sku" class="col-sm-2 control-label">Delivery Date:</label>
+    <div class="col-sm-4">
+        <div class="input-append date" id="dp4" data-date-format="dd-mm-yyyy">
+          <input class="span2" size="16" type="text" ng-model="order.deliveryDate">
+          <span class="add-on"><i class="icon-th"></i></span>
+        </div>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="sku" class="col-sm-2 control-label">Name Of Panel:</label>
+    <div class="col-sm-4">
+      <input class="form-control" id="sku"
+             ng-model="order.nameOfPanel" placeholder="Enter Name Of Panel"/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="sku" class="col-sm-2 control-label">Billing:</label>
+    <div class="col-sm-4">
+      <div class="radio-inline">
+          <label><input type="radio" id="biilableYes" value="Yes" name="billable">Yes</label>
+       </div>
+       <div class="radio-inline">
+          <label><input type="radio" id="biilableNo" value="No" name="billable">No</label>
+       </div>      
+    </div>
+  </div>
+
+<div class="form-group">
+    <label for="sku" class="col-sm-2 control-label">Wiring:</label>
+    <div class="col-sm-4">
+      <div class="radio-inline">
+          <label><input type="radio" id="wiringYes" value="Yes" name="wiring">Yes</label>
+       </div>
+       <div class="radio-inline">
+          <label><input type="radio" id="wiringNo" id="wiringFalse" value="No" name="wiring">No</label>
+       </div>      
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="sku" class="col-sm-2 control-label">Total Cost:</label>
+    <div class="col-sm-4">
+      <input class="form-control" id="sku" type="number"
+             ng-model="order.totalCost" placeholder="Enter Totol Cost"/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="sku" class="col-sm-2 control-label">Fabrication Cost:</label>
+    <div class="col-sm-4">
+      <input class="form-control" id="sku" type="number"
+             ng-model="order.fabricationCost" placeholder="Enter Febrication Cost"/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="sku" class="col-sm-2 control-label">Wiring Cost:</label>
+    <div class="col-sm-4">
+      <input class="form-control" id="sku" type="number"
+             ng-model="order.wiringCost" placeholder="Enter Wiring Cost"/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="sku" class="col-sm-2 control-label">Matrial With Component:</label>
+    <div class="col-sm-4">
+      <input class="form-control" id="sku"
+             ng-model="order.materialComponent" placeholder="Enter Matrial No"/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="Price" class="col-sm-2 control-label">Payment Type:</label>
+    <div class="col-sm-4">
+       <div class="radio-inline">
+          <label><input type="radio" id="Cash"  value="Cash" name="paymentType">Cash</label>
+       </div>
+       <div class="radio-inline">
+          <label><input type="radio" id="Cheque" value="Cheque" name="paymentType">Cheque</label>
+       </div>
+       <div class="radio-inline">
+          <label><input type="radio" id="Online" value="Online" name="paymentType">Online</label>
+       </div>
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <a ng-click="addOrder()" class="btn btn-small btn-primary">Add</a>
+      <a href="#/order" class="btn btn-small btn-default">Cancel</a>
+    </div>
+  </div>
+
+</form>

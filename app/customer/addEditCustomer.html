@@ -1,0 +1,63 @@
+<h3>Add Customer</h3>
+
+<form class="form-horizontal" role="form">
+  <div class="form-group">
+    <label for="sku" class="col-sm-2 control-label">TIN No:</label>
+    <div class="col-sm-4">
+      <input class="form-control" id="sku"
+             ng-model="customer.tinNo" placeholder="Enter TIN No"/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="description" class="col-sm-2 control-label">Customer Name:</label>
+    <div class="col-sm-4">
+      <input class="form-control" id="description"
+             ng-model="customer.name" placeholder="Enter Customer Name"/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="description" class="col-sm-2 control-label">Address:</label>
+    <div class="col-sm-4">
+      <input class="form-control" id="description"
+             ng-model="customer.address" placeholder="Enter Address  "/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label for="Price" class="col-sm-2 control-label">Contact No:</label>
+    <div class="col-sm-4">
+      <input class="form-control" id="price" type="phoneNumber" min=”0? step="any"
+             ng-model="customer.contactNo" placeholder="Enter Contact No"/>
+    </div>
+  </div>
+
+<div class="form-group">
+    <label for="Price" class="col-sm-2 control-label">Type:</label>
+    <div class="col-sm-4">
+       <div class="radio">
+          <label><input type="radio" id="Contractor" value="Contractor" name="optradio">Contractor</label>
+       </div>
+       <div class="radio">
+          <label><input type="radio" id="Builder" value="Builder" name="optradio">Builder</label>
+       </div>
+       <div class="radio">
+          <label><input type="radio" id="HouseHold" value="HouseHold" name="optradio">HouseHold</label>
+       </div>
+       <div class="radio">
+          <label><input type="radio" id="Others" value="Others" name="optradio">Others</label>
+       </div>
+
+    </div>
+  </div>
+
+  
+  <div class="form-group">
+
+    <div class="col-sm-offset-2 col-sm-10">
+      <a ng-click="addCustomer()" class="btn btn-small btn-primary">Add</a>
+      <a href="#/customer" class="btn btn-small btn-default">Cancel</a>
+    </div>
+  </div>
+</form>

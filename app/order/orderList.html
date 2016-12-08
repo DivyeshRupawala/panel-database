@@ -1,0 +1,37 @@
+<div class="container">
+    <h2><center>Order List</center></h2>
+
+<table class="table" >
+  <p style="float:right;">
+    <a href="#/addEditOrder/null" class="btn btn-success" role="button">Add New Order</a>
+  </p>
+
+  <p>
+    <a ng-click="displayActive(isActive)" class="btn btn-primary" role="button">{{isActive ? "Active Order" : "Inactive Order"}}</a>
+  </p>
+
+   <thead>
+    <tr>
+      <th>Name</th>
+      <th>Delivery Date</th>
+      <th>Bilable</th>
+      <th>Total Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="c in orderList" ng-if="c.isActive == isActive">
+      <td>{{c.name}}</td>
+      <td>{{c.deliveryDate}}</td>
+      <td>{{c.billable}}</td>
+      <td>{{c.totalCost | currency:"&#8377;"}}</td>
+    <td>
+      <a href="#/addEditOrder/{{c.$id}}" class="glyphicon glyphicon-pencil"
+      style="cursor: pointer;margin-right: 5px;color:black;color:black;" title="Edit Record"></a> 
+      <a ng-click="deleteRecord(c.$id)" class="glyphicon glyphicon-remove" 
+      style="cursor: pointer;color:black;" title="Delete Record"></a>
+    </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>

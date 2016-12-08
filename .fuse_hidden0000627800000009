@@ -1,0 +1,45 @@
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /usr/bin/nodejs /usr/local/bin/firebase init
+[debug] CLI Version:  3.1.0
+[debug] Platform:     linux
+[debug] Node Version: v4.2.6
+[debug] Time:         Mon Nov 21 2016 23:54:05 GMT+0530 (IST)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /media/divyesh/D6D6AC36D6AC192F/Angular Projects/angular-seed
+
+Before we get started, keep in mind:
+
+  * You are currently outside your home directory
+  * You are initializing in an existing Firebase project directory
+
+[debug] ----------------------------------------------------------------------
+[debug] Command:      /usr/bin/nodejs /usr/local/bin/firebase deploy
+[debug] CLI Version:  3.1.0
+[debug] Platform:     linux
+[debug] Node Version: v4.2.6
+[debug] Time:         Mon Nov 21 2016 23:54:24 GMT+0530 (IST)
+[debug] ----------------------------------------------------------------------
+[debug] 
+[debug] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase"]
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/panel-database 
+[debug] <<< HTTP RESPONSE 200
+[debug] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/panel-database/tokens 
+[debug] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: We found a hosting key inside firebase.json as well as hosting configuration keys that are not nested inside the hosting key.
+[info] 
+
+Please run firebase tools:migrate to fix this issue.
+[info] Please note that this will overwrite any configuration keys nested inside the hosting key with configuration keys at the root level of firebase.json.
+[error] 
+[error] Error: Hosting key and legacy hosting keys are both present in firebase.json.

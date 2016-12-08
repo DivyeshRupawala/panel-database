@@ -1,0 +1,34 @@
+<div class="container">
+    <h2><center>Customer List</center></h2>
+
+<table class="table" >
+  <p style="float:right;">
+    <a href="#/addEditCustomer/null" class="btn btn-success" role="button">Add New Customer</a>
+  </p>
+
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Contact No</th>
+      <th>Type</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="c in customers">
+      <td>{{c.name}}</td>
+      <td>{{c.contactNo}}</td>
+      <td>{{c.type}}</td>
+    <td>
+      <a href="#/detailCustomer/{{c.$id}}" class="glyphicon glyphicon-eye-open"
+      style="cursor: pointer;;margin-right: 5px;color:black;" title="Detail View"></a>
+      <a href="#/addEditCustomer/{{c.$id}}" class="glyphicon glyphicon-pencil"
+      style="cursor: pointer;;margin-right: 5px;color:black;" title="Edit Record"></a> 
+      <a ng-click="deleteRecord(c.$id)" class="glyphicon glyphicon-remove" 
+      style="cursor: pointer;color:black;" title="Delete Record"></a>
+    </td>
+    </tr>
+  </tbody>
+</table>
+
+</div>

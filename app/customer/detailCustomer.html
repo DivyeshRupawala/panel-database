@@ -1,0 +1,25 @@
+<div class="container">
+<h2>{{customer.name | uppercase}}</h2>
+
+<div>
+	<div><label>Address :  </label>{{customer.address}}</div>
+	<div><label>Contact No :  </label>{{customer.contactNo}}</div>
+	<div><label>TIN No :  </label>{{customer.tinNo}}</div>
+	<div><label>Type :  </label>{{customer.type}}</div>	
+</div>
+
+<div class="list-group">
+  <a class="list-group-item" ng-repeat="o in orderList" ng-if="customer.id == o.customerId">
+    <h3 class="list-group-item-heading">{{o.nameOfPanel}}</h3>
+    <div><label>Order Date :  </label>{{o.orderDate}}</div>
+    <div><label>Delivery Date :  </label>{{o.deliveryDate}}</div>
+	<div><label>Billing :  </label>{{o.billable}}</div>
+	<div><label>Wiring :  </label>{{o.wiring}}</div>
+	<div><label>Total Cost :  </label>{{o.totalCost | currency:"&#8377;"}}</div>
+	<div><label>Fabrication Cost :  </label>{{o.fabricationCost | currency:"&#8377;"}}</div>
+	<div><label>Wiring Cost :  </label>{{o.wiringCost | currency:"&#8377;"}}</div>
+	<div><label>Matrial With Component :  </label>{{o.materialComponent}}</div>
+	<div><label>Payment Type :  </label>{{o.paymentType}}</div>	
+  </a>
+</div>
+</div>

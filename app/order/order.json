@@ -1,0 +1,27 @@
+{
+  "oders" : {
+    "0" : {
+      "name" : "Diveysh",
+      "orderDate" : "24-11-2016",
+      "deliveryDate" : "29-11-2016",
+      "billable" : true,
+      "wiring" : false,
+      "totalCost" : 1000,
+      "fabricationCost" : 500,
+      "materialComponent" : "Need to Check",
+      "paymentType": "Cash"
+    },
+    "1" : {
+      "name" : "Vinod",
+      "orderDate" : "25-11-2016",
+      "deliveryDate" : "30-11-2016",
+      "billable" : false,
+      "wiring" : true,
+      "totalCost" : 3000,
+      "fabricationCost" : 700,
+      "materialComponent" : "Need to Check",
+      "paymentType": "Check"
+    }      
+  }
+}
+

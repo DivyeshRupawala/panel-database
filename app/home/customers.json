@@ -1,0 +1,66 @@
+{
+  "customers" : {
+    "0" : {
+      "name" : "Diveysh",
+      "tinNo" : 123456,
+      "address" : "Bangalore Hennur",
+      "contactNo" : 1234567890,
+      "type" : "Contract",
+      "orders" : {
+            "0" : {
+              "name" : "Diveysh test",
+              "orderDate" : "24-11-2016",
+              "deliveryDate" : "29-11-2016",
+              "billable" : true,
+              "wiring" : false,
+              "totalCost" : 1100,
+              "fabricationCost" : 500,
+              "materialComponent" : "Need to Check",
+              "paymentType": "Cash"
+            },
+            "1" : {
+              "name" : "Vinod test",
+              "orderDate" : "25-11-2016",
+              "deliveryDate" : "30-11-2016",
+              "billable" : false,
+              "wiring" : true,
+              "totalCost" : 2000,
+              "fabricationCost" : 700,
+              "materialComponent" : "Need to Check",
+              "paymentType": "Check"
+            }      
+          }
+    },
+    "1" : {
+      "name" : "Vinod",
+      "tinNo" : 111111,
+      "address" : "Bangalore Raghvendra nagar",
+      "contactNo" : 9999999999,
+      "type" : "Builder",
+      "orders" : {
+            "0" : {
+              "name" : "Diveysh",
+              "orderDate" : "24-11-2016",
+              "deliveryDate" : "29-11-2016",
+              "billable" : true,
+              "wiring" : false,
+              "totalCost" : 1000,
+              "fabricationCost" : 500,
+              "materialComponent" : "Need to Check",
+              "paymentType": "Cash"
+            },
+            "1" : {
+              "name" : "Vinod",
+              "orderDate" : "25-11-2016",
+              "deliveryDate" : "30-11-2016",
+              "billable" : false,
+              "wiring" : true,
+              "totalCost" : 3000,
+              "fabricationCost" : 700,
+              "materialComponent" : "Need to Check",
+              "paymentType": "Check"
+            }      
+          }
+    }    
+  }
+}

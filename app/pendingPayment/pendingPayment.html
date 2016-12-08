@@ -1,0 +1,14 @@
+<div class="container">
+<h2>PENDING PAYMENT</h2>
+
+<div class="list-group">
+  <a class="list-group-item" ng-repeat="o in orderList" ng-if="o.isActive == true">
+  	<div style="float:right;" ng-click="done(o.$id)" class="btn btn-primary" role="button">Done</div>
+    <h3 class="list-group-item-heading">{{o.name}}</h3>
+    <div><label>Name Of Panel :  </label>{{o.nameOfPanel}}</div>
+	<div><label>Total Cost :  </label>{{o.totalCost | currency:"&#8377;"}}</div>
+	<div><label>Fabrication Cost :  </label>{{o.fabricationCost | currency:"&#8377;"}}</div>
+	<div><label>Wiring Cost :  </label>{{o.wiringCost | currency:"&#8377;"}}</div>
+  </a>
+</div>
+</div>
